@@ -21,6 +21,56 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  assets:
+    - assets/fonts/
+
+
+  fonts:
+    - family: TASAOrbiterDeck
+      fonts:
+        - asset: assets/fonts/TASAOrbiterDeck-Regular.otf
+          weight: 400
+        - asset: assets/fonts/TASAOrbiterDeck-Medium.otf
+          weight: 500
+        - asset: assets/fonts/TASAOrbiterDeck-SemiBold.otf
+          weight: 600
+        - asset: assets/fonts/TASAOrbiterDeck-Bold.otf
+          weight: 700
+
+    - family: TASAOrbiterDisplay
+      fonts:
+        - asset: assets/fonts/TASAOrbiterDisplay-Regular.otf
+          weight: 400
+        - asset: assets/fonts/TASAOrbiterDisplay-Medium.otf
+          weight: 500
+        - asset: assets/fonts/TASAOrbiterDisplay-SemiBold.otf
+          weight: 600
+        - asset: assets/fonts/TASAOrbiterDisplay-Bold.otf
+          weight: 700
+        - asset: assets/fonts/TASAOrbiterDisplay-Black.otf
+          weight: 900
+
+    - family: TASAOrbiterText
+      fonts:
+        - asset: assets/fonts/TASAOrbiterText-Regular.otf
+          weight: 400
+        - asset: assets/fonts/TASAOrbiterText-Medium.otf
+          weight: 500
+        - asset: assets/fonts/TASAOrbiterText-SemiBold.otf
+          weight: 600
+        - asset: assets/fonts/TASAOrbiterText-Bold.otf
+          weight: 700
+
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
 
   # To add assets to your package, add an assets section, like this:
   # assets:
