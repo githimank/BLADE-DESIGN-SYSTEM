@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'app_color.dart';
+
 class MaterialTheme {
   const MaterialTheme(this.textTheme);
 

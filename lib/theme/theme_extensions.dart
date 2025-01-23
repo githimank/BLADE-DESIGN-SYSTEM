@@ -1,4 +1,9 @@
+import 'package:blade_design_system/theme/blade_theme.dart';
+import 'package:blade_design_system/theme/theme.dart';
 import 'package:flutter/material.dart';
+
+import 'colors/i_color_theme.dart';
+import 'colors/light_color_theme_impl.dart';
 
 extension ContextExtension on BuildContext {
   ThemeData get theme => Theme.of(this);
@@ -6,9 +11,10 @@ extension ContextExtension on BuildContext {
   ColorScheme get colorScheme => theme.colorScheme;
 
   TextTheme get typography => theme.textTheme;
-  AppTextTheme get appTypography =>
-      theme.extension<AppTextTheme>() ??
-      SmallScreenTypographyImpl().appTextTheme;
+
+  // AppTextTheme get appTypography =>
+  //     theme.extension<AppTextTheme>() ??
+  //     SmallScreenTypographyImpl().appTextTheme;
 
   ExtendedColors? get extendedColors => theme.extension<ExtendedColors>();
 
@@ -26,16 +32,16 @@ extension ContextExtension on BuildContext {
 
 extension ThemeExtensions on TextStyle? {
   TextStyle? get regular =>
-      this?.copyWith(fontWeight: MortarsTheme.fontWeights.fw400);
+      this?.copyWith(fontWeight: BladeTheme.fontWeights.fw400);
 
   TextStyle? get medium =>
-      this?.copyWith(fontWeight: MortarsTheme.fontWeights.fw500);
+      this?.copyWith(fontWeight: BladeTheme.fontWeights.fw500);
 
   TextStyle? get semiBold =>
-      this?.copyWith(fontWeight: MortarsTheme.fontWeights.fw600);
+      this?.copyWith(fontWeight: BladeTheme.fontWeights.fw600);
 
   TextStyle? get bold =>
-      this?.copyWith(fontWeight: MortarsTheme.fontWeights.fw700);
+      this?.copyWith(fontWeight: BladeTheme.fontWeights.fw700);
 
   TextStyle? setColor(Color color) {
     return this?.copyWith(color: color);
