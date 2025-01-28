@@ -1,5 +1,6 @@
+import 'package:blade_design_system/responsive/typography/small_screen_typography_impl.dart';
+import 'package:blade_design_system/theme/app_color.dart';
 import 'package:blade_design_system/theme/blade_theme.dart';
-import 'package:blade_design_system/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 import 'colors/i_color_theme.dart';
@@ -12,9 +13,9 @@ extension ContextExtension on BuildContext {
 
   TextTheme get typography => theme.textTheme;
 
-  // AppTextTheme get appTypography =>
-  //     theme.extension<AppTextTheme>() ??
-  //     SmallScreenTypographyImpl().appTextTheme;
+  AppTextTheme get appTypography =>
+      theme.extension<AppTextTheme>() ??
+      SmallScreenTypographyImpl().appTextTheme;
 
   ExtendedColors? get extendedColors => theme.extension<ExtendedColors>();
 
@@ -54,12 +55,10 @@ extension ThemeExtensions on TextStyle? {
 
 extension DimensionExtensions on num {
   double get hMul {
-    // return (this * 1.37).h;
     return (this).toDouble();
   }
 
   double get wMul {
-    // return (this * 1.27).w;
     return (this).toDouble();
   }
 
