@@ -168,21 +168,32 @@ class SmallScreenTypographyImpl implements IBpTypography {
 
   @override
   AppTextTheme get appTextTheme => AppTextTheme(
-        displayXLarge: displayXLarge,
-        displayLarge: displayLarge,
-        displayMedium: displayMedium,
-        displaySmall: displaySmall,
-        heading2XLarge: heading2XLarge,
-        headingXLarge: headingXLarge,
-        headingLarge: headingLarge,
-        headingMedium: headingMedium,
-        headingSmall: headingSmall,
-        bodyLarge: bodyLarge,
-        bodyMedium: bodyMedium,
-        bodySmall: bodySmall,
-        bodyXSmall: bodyXSmall,
-        captionMedium: captionMedium,
-        codeMedium: codeMedium,
-        codeSmall: codeSmall,
+      displayXLarge: displayXLarge,
+      displayLarge: displayLarge,
+      displayMedium: displayMedium,
+      displaySmall: displaySmall,
+      heading2XLarge: heading2XLarge,
+      headingXLarge: headingXLarge,
+      headingLarge: headingLarge,
+      headingMedium: headingMedium,
+      headingSmall: headingSmall,
+      bodyLarge: bodyLarge,
+      bodyMedium: bodyMedium,
+      bodySmall: bodySmall,
+      bodyXSmall: bodyXSmall,
+      captionMedium: captionMedium,
+      codeMedium: codeMedium,
+      codeSmall: codeSmall,
+      captionSmall: captionSmall);
+
+  @override
+  TextStyle get captionSmall => TextStyle(
+        fontFamily: FontFamilies.inter,
+        fontSize: BladeTheme.fontSizes.fs25,
+        height: BladeTheme.lineHeight.lh50 / BladeTheme.fontSizes.fs25,
+        fontWeight: FontWeight.w600,
+        letterSpacing: BladeTheme.letterSpacing.ls100,
+        decoration: TextDecoration.none,
+        leadingDistribution: TextLeadingDistribution.even,
       );
 }

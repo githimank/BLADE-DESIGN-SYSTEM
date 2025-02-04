@@ -183,5 +183,17 @@ class LargeScreenTypographyImpl implements IBpTypography {
         captionMedium: captionMedium,
         codeMedium: codeMedium,
         codeSmall: codeSmall,
+        captionSmall: captionSmall,
+      );
+
+  @override
+  TextStyle get captionSmall => TextStyle(
+        fontFamily: FontFamilies.inter,
+        fontSize: BladeTheme.fontSizes.fs50,
+        height: BladeTheme.lineHeight.lh50 / BladeTheme.fontSizes.fs50,
+        fontWeight: FontWeight.w600,
+        letterSpacing: BladeTheme.letterSpacing.ls100,
+        decoration: TextDecoration.none,
+        leadingDistribution: TextLeadingDistribution.even,
       );
 }

@@ -86,6 +86,7 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
   final TextStyle bodySmall;
   final TextStyle bodyXSmall;
   final TextStyle captionMedium;
+  final TextStyle captionSmall;
   final TextStyle codeMedium;
   final TextStyle codeSmall;
 
@@ -106,6 +107,7 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
     required this.captionMedium,
     required this.codeMedium,
     required this.codeSmall,
+    required this.captionSmall,
   });
 
   // @override
@@ -135,25 +137,26 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
     TextStyle? captionMedium,
     TextStyle? codeMedium,
     TextStyle? codeSmall,
+    TextStyle? captionSmall,
   }) {
     return AppTextTheme(
-      displayXLarge: displayXLarge ?? this.displayXLarge,
-      displayLarge: displayLarge ?? this.displayLarge,
-      displayMedium: displayMedium ?? this.displayMedium,
-      displaySmall: displaySmall ?? this.displaySmall,
-      heading2XLarge: heading2XLarge ?? this.heading2XLarge,
-      headingXLarge: headingXLarge ?? this.headingXLarge,
-      headingLarge: headingLarge ?? this.headingLarge,
-      headingMedium: headingMedium ?? this.headingMedium,
-      headingSmall: headingSmall ?? this.headingSmall,
-      bodyLarge: bodyLarge ?? this.bodyLarge,
-      bodyMedium: bodyMedium ?? this.bodyMedium,
-      bodySmall: bodySmall ?? this.bodySmall,
-      bodyXSmall: bodyXSmall ?? this.bodyXSmall,
-      captionMedium: captionMedium ?? this.captionMedium,
-      codeMedium: codeMedium ?? this.codeMedium,
-      codeSmall: codeSmall ?? this.codeSmall,
-    );
+        displayXLarge: displayXLarge ?? this.displayXLarge,
+        displayLarge: displayLarge ?? this.displayLarge,
+        displayMedium: displayMedium ?? this.displayMedium,
+        displaySmall: displaySmall ?? this.displaySmall,
+        heading2XLarge: heading2XLarge ?? this.heading2XLarge,
+        headingXLarge: headingXLarge ?? this.headingXLarge,
+        headingLarge: headingLarge ?? this.headingLarge,
+        headingMedium: headingMedium ?? this.headingMedium,
+        headingSmall: headingSmall ?? this.headingSmall,
+        bodyLarge: bodyLarge ?? this.bodyLarge,
+        bodyMedium: bodyMedium ?? this.bodyMedium,
+        bodySmall: bodySmall ?? this.bodySmall,
+        bodyXSmall: bodyXSmall ?? this.bodyXSmall,
+        captionMedium: captionMedium ?? this.captionMedium,
+        codeMedium: codeMedium ?? this.codeMedium,
+        codeSmall: codeSmall ?? this.codeSmall,
+        captionSmall: captionSmall ?? this.captionSmall);
   }
 
   @override
@@ -192,6 +195,8 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
           captionMedium,
       codeMedium: TextStyle.lerp(codeMedium, other.codeMedium, t) ?? codeMedium,
       codeSmall: TextStyle.lerp(codeSmall, other.codeSmall, t) ?? codeSmall,
+      captionSmall:
+          TextStyle.lerp(captionSmall, other.captionSmall, t) ?? captionSmall,
     );
   }
 }
