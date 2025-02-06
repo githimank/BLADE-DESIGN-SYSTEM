@@ -1,8 +1,9 @@
+import 'package:blade_design_system/components/radio/radio_enum.dart';
+import 'package:blade_design_system/theme/theme_extensions.dart';
+import 'package:blade_design_system/theme/tokens/spacing.dart';
 import 'package:flutter/material.dart';
-import 'package:mortars_design_system/components/radio/bp_enums.dart';
-import 'package:mortars_design_system/components/radio/bp_radio.dart';
-import 'package:mortars_design_system/theme/theme_extensions.dart';
-import 'package:mortars_design_system/theme/tokens/spacing.dart';
+
+import 'bp_radio.dart';
 
 class BpRadioData<T> {
   final String label;
