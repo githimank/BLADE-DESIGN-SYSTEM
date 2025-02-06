@@ -2,6 +2,7 @@ import 'package:blade_design_system/theme/blade_theme.dart';
 import 'package:blade_design_system/theme/colors/light_color_theme_impl.dart';
 import 'package:flutter/material.dart';
 
+import 'components/spinner_details.dart';
 import 'components_screen.dart';
 
 void main() {
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const ComponentsScreen(),
+        '/spinner': (context) => const SpinnerDetails(),
       },
       themeMode: ThemeMode.system,
       theme: ThemeData(
