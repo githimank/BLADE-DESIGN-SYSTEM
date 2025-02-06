@@ -30,26 +30,28 @@ abstract interface class IBpTypography {
 
   TextStyle get captionMedium;
 
+  TextStyle get captionSmall;
+
   TextStyle get codeMedium;
 
   TextStyle get codeSmall;
 
   AppTextTheme get appTextTheme => AppTextTheme(
-        displayXLarge: displayXLarge,
-        displayLarge: displayLarge,
-        displayMedium: displayMedium,
-        displaySmall: displaySmall,
-        heading2XLarge: heading2XLarge,
-        headingXLarge: headingXLarge,
-        headingLarge: headingLarge,
-        headingMedium: headingMedium,
-        headingSmall: headingSmall,
-        bodyLarge: bodyLarge,
-        bodyMedium: bodyMedium,
-        bodySmall: bodySmall,
-        bodyXSmall: bodyXSmall,
-        captionMedium: captionMedium,
-        codeMedium: codeMedium,
-        codeSmall: codeSmall,
-      );
+      displayXLarge: displayXLarge,
+      displayLarge: displayLarge,
+      displayMedium: displayMedium,
+      displaySmall: displaySmall,
+      heading2XLarge: heading2XLarge,
+      headingXLarge: headingXLarge,
+      headingLarge: headingLarge,
+      headingMedium: headingMedium,
+      headingSmall: headingSmall,
+      bodyLarge: bodyLarge,
+      bodyMedium: bodyMedium,
+      bodySmall: bodySmall,
+      bodyXSmall: bodyXSmall,
+      captionMedium: captionMedium,
+      codeMedium: codeMedium,
+      codeSmall: codeSmall,
+      captionSmall: captionSmall);
 }
