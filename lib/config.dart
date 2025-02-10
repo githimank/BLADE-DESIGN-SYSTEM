@@ -1,1 +1,1 @@
-const packageName = 'mortars_design_system';
+const packageName = 'blade_design_system';

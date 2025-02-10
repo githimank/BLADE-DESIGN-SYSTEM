@@ -1,7 +1,8 @@
+import 'package:blade_design_system/theme/theme_extensions.dart';
+import 'package:blade_design_system/theme/tokens/spacing.dart';
 import 'package:flutter/material.dart';
-import 'package:mortars_design_system/components/badges/badge_styles.dart';
-import 'package:mortars_design_system/theme/theme_extensions.dart';
-import 'package:mortars_design_system/theme/tokens/spacing.dart';
+
+import 'badge_styles.dart';
 
 enum BadgeEmphasis {
   SUBTLE,
