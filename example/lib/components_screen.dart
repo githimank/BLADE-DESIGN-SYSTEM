@@ -35,6 +35,15 @@ class ComponentsScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/badgeDetails');
+                },
+                child: const Text(
+                  'Badge Details',
+                ),
+              ),
+              const SizedBox(height: 20),
             ],
           ),
         ),

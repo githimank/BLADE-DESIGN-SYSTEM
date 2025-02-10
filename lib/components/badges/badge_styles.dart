@@ -1,6 +1,7 @@
+import 'package:blade_design_system/theme/theme_extensions.dart';
 import 'package:flutter/material.dart';
-import 'package:mortars_design_system/components/badges/bp_badges.dart';
-import 'package:mortars_design_system/theme/theme_extensions.dart';
+
+import 'bp_badges.dart';
 
 class BadgePropertyColors {
   final Color background;
