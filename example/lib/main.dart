@@ -1,7 +1,10 @@
 import 'package:blade_design_system/theme/blade_theme.dart';
 import 'package:blade_design_system/theme/colors/light_color_theme_impl.dart';
+import 'package:example/components/checkbox_demo.dart';
 import 'package:flutter/material.dart';
 
+import 'components/RadioDemo.dart';
+import 'components/badge_details.dart';
 import 'components/spinner_details.dart';
 import 'components_screen.dart';
 
@@ -21,6 +24,9 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const ComponentsScreen(),
         '/spinner': (context) => const SpinnerDetails(),
+        '/checkboxDemo': (context) => const CheckboxDemo(),
+        '/badgeDetails': (context) => const BadgeDetails(),
+        '/radioDemo': (context) => const RadioDemo(),
       },
       themeMode: ThemeMode.system,
       theme: ThemeData(
