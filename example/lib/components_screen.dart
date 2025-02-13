@@ -44,6 +44,15 @@ class ComponentsScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/checkboxDemo');
+                },
+                child: const Text(
+                  'checkbox',
+                ),
+              ),
+              const SizedBox(height: 20),
             ],
           ),
         ),
