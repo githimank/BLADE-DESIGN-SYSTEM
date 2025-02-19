@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import 'components/RadioDemo.dart';
 import 'components/badge_details.dart';
+import 'components/chip_demo.dart';
 import 'components/spinner_details.dart';
 import 'components/tooltip_demo.dart';
 import 'components_screen.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const ComponentsScreen(),
         '/spinner': (context) => const SpinnerDetails(),
         '/checkboxDemo': (context) => const CheckboxDemo(),
+        '/chipDemo': (context) => const ChipDemo(),
         '/badgeDetails': (context) => const BadgeDetails(),
         '/radioDemo': (context) => const RadioDemo(),
         '/tooltipDemo': (context) => const TooltipDemo(),
