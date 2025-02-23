@@ -4,6 +4,7 @@ import 'package:example/components/checkbox_demo.dart';
 import 'package:flutter/material.dart';
 
 import 'components/RadioDemo.dart';
+import 'components/amount_demo.dart';
 import 'components/badge_details.dart';
 import 'components/chip_demo.dart';
 import 'components/spinner_details.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         '/badgeDetails': (context) => const BadgeDetails(),
         '/radioDemo': (context) => const RadioDemo(),
         '/tooltipDemo': (context) => const TooltipDemo(),
+        '/amountDemo': (context) => const AmountDemo(),
       },
       themeMode: ThemeMode.system,
       theme: ThemeData(
