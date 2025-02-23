@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'amount_enums.dart';
 
-class BpAmount extends StatelessWidget {
+class AmountWidget extends StatelessWidget {
   final double value;
   final AmountWeight weight;
   final AmountSize size;
@@ -16,7 +16,7 @@ class BpAmount extends StatelessWidget {
   final bool isStrikethrough;
   final Color? color;
 
-  const BpAmount({
+  const AmountWidget({
     super.key,
     required this.value,
     this.weight = AmountWeight.SEMIBOLD,
