@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'components/RadioDemo.dart';
 import 'components/amount_demo.dart';
 import 'components/badge_details.dart';
+import 'components/button_details.dart';
 import 'components/chip_demo.dart';
 import 'components/spinner_details.dart';
 import 'components/tooltip_demo.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         '/radioDemo': (context) => const RadioDemo(),
         '/tooltipDemo': (context) => const TooltipDemo(),
         '/amountDemo': (context) => const AmountDemo(),
+        '/buttonDetails': (context) => const ButtonDetails(),
       },
       themeMode: ThemeMode.system,
       theme: ThemeData(
