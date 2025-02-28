@@ -2,6 +2,49 @@ import 'package:blade_design_system/components/button/button_properties.dart';
 import 'package:blade_design_system/theme/theme_extensions.dart';
 import 'package:flutter/material.dart';
 
+enum LinkType {
+  ANCHOR,
+  ACTION,
+}
+
+enum LinkSize {
+  LARGE(16.0),
+  MEDIUM(16.0),
+  SMALL(12.0),
+  EXTRA_SMALL(12.0);
+
+  final double height;
+
+  const LinkSize(this.height);
+
+  TextStyle textStyleWithMedium(BuildContext context) {
+    final TextStyle baseStyle = switch (this) {
+      LinkSize.LARGE => context.appTypography.bodyLarge.medium!,
+      LinkSize.MEDIUM => context.appTypography.bodyMedium.medium!,
+      LinkSize.SMALL => context.appTypography.bodySmall.medium!,
+      LinkSize.EXTRA_SMALL => context.appTypography.bodyXSmall.medium!,
+    };
+    return baseStyle;
+    // return baseStyle.copyWith(fontSize: height);
+  }
+
+  TextStyle textStyleWithSemiBold(BuildContext context) {
+    final TextStyle baseStyle = switch (this) {
+      LinkSize.LARGE => context.appTypography.bodyLarge.medium!,
+      LinkSize.MEDIUM => context.appTypography.bodyMedium.semiBold!,
+      LinkSize.SMALL => context.appTypography.bodySmall.semiBold!,
+      LinkSize.EXTRA_SMALL => context.appTypography.bodyXSmall.semiBold!,
+    };
+    return baseStyle;
+    // return baseStyle.copyWith(fontSize: height);
+  }
+}
+
+enum LinkIconPosition {
+  RIGHT,
+  LEFT,
+}
+
 class LinkPropertyColors {
   final Color? focusBorder;
   final Color text;
@@ -55,8 +98,7 @@ class LinkProperties {
     };
   }
 
-  static LinkProperties anchor(BuildContext context) =>
-      LinkProperties(
+  static LinkProperties anchor(BuildContext context) => LinkProperties(
         primary: LinkStateColors(
           defaultColor: LinkPropertyColors(
               focusBorder: context.colorTheme.surface.border.primary.muted,
@@ -185,8 +227,7 @@ class LinkProperties {
         ),
       );
 
-  static LinkProperties action(BuildContext context) =>
-      LinkProperties(
+  static LinkProperties action(BuildContext context) => LinkProperties(
         primary: LinkStateColors(
           defaultColor: LinkPropertyColors(
               focusBorder: context.colorTheme.surface.border.primary.muted,
