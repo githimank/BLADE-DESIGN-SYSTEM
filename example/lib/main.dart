@@ -1,6 +1,7 @@
 import 'package:blade_design_system/theme/blade_theme.dart';
 import 'package:blade_design_system/theme/colors/light_color_theme_impl.dart';
 import 'package:example/components/checkbox_demo.dart';
+import 'package:example/components/link_demo.dart';
 import 'package:flutter/material.dart';
 
 import 'components/RadioDemo.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         '/tooltipDemo': (context) => const TooltipDemo(),
         '/amountDemo': (context) => const AmountDemo(),
         '/buttonDetails': (context) => const ButtonDetails(),
+        '/buttonLink': (context) => const LinkDemo(),
       },
       themeMode: ThemeMode.system,
       theme: ThemeData(
