@@ -80,6 +80,15 @@ class ComponentsScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/buttonLink');
+                },
+                child: const Text(
+                  'button Link',
+                ),
+              ),
+              const SizedBox(height: 20),
             ],
           ),
         ),
