@@ -1,4 +1,8 @@
-import 'package:blade_design_system/components/button_icon/icon_button.dart';
+import 'package:blade_design_system/theme/theme_extensions.dart';
+import 'package:blade_design_system/theme/tokens/borders.dart';
+import 'package:blade_design_system/theme/tokens/easings.dart';
+import 'package:blade_design_system/theme/tokens/global_icon_size.dart';
+import 'package:blade_design_system/theme/tokens/spacing.dart';
 import 'package:flutter/material.dart';
 
 import 'accordion_enum.dart';
@@ -32,9 +36,9 @@ class AccordionHeaderData {
       required this.size});
 }
 
-
 class BpAccordionHeader extends StatefulWidget {
   final AccordionHeaderData headerData;
+
   const BpAccordionHeader({super.key, required this.headerData});
 
   @override
@@ -54,7 +58,7 @@ class _BpAccordionHeaderState extends State<BpAccordionHeader>
       vsync: this,
     );
     _animation = Tween<double>(begin: 0, end: -0.5).animate(
-      CurvedAnimation(parent: _controller, curve: Easings.standardEffective),
+      CurvedAnimation(parent: _controller, curve: Easings.standardRevealing),
     );
     if (widget.headerData.isExpanded) {
       _controller.forward();
@@ -104,7 +108,7 @@ class _BpAccordionHeaderState extends State<BpAccordionHeader>
         hoverStateValue: context.colorTheme.interactive.background.gray.faded,
         focusStateValue: context.colorTheme.interactive.background.gray.faded,
         disabledStateValue:
-        context.colorTheme.interactive.background.gray.disabled);
+            context.colorTheme.interactive.background.gray.disabled);
 
     final iconColor = getValueWithStates(_states,
         defaultStateValue: context.colorTheme.interactive.icon.gray.muted,
@@ -141,8 +145,8 @@ class _BpAccordionHeaderState extends State<BpAccordionHeader>
       onTap: widget.headerData.isDisabled
           ? null
           : () {
-        widget.headerData.onTap?.call();
-      },
+              widget.headerData.onTap?.call();
+            },
       child: Container(
         padding: const EdgeInsets.symmetric(
             vertical: Spacings.spacing5, horizontal: Spacings.spacing5),
@@ -150,8 +154,8 @@ class _BpAccordionHeaderState extends State<BpAccordionHeader>
           color: bgColor,
           border: _states.contains(WidgetState.focused)
               ? Border.all(
-              color: context.colorTheme.surface.border.primary.muted,
-              width: 3)
+                  color: context.colorTheme.surface.border.primary.muted,
+                  width: 3)
               : null,
           borderRadius: _states.contains(WidgetState.focused)
               ? Borders.radii.medium
@@ -165,11 +169,11 @@ class _BpAccordionHeaderState extends State<BpAccordionHeader>
               Text(
                 '${widget.headerData.index! + 1}.',
                 style: (widget.headerData.size == AccordionSize.MEDIUM
-                    ? context.appTypography.bodyMedium.regular.semiBold
-                    : context.appTypography.bodyLarge.regular.semiBold)
+                        ? context.appTypography.bodyMedium.regular.semiBold
+                        : context.appTypography.bodyLarge.regular.semiBold)
                     .setColor(widget.headerData.isDisabled
-                    ? context.colorTheme.surface.text.gray.disabled
-                    : context.colorTheme.surface.text.gray.normal),
+                        ? context.colorTheme.surface.text.gray.disabled
+                        : context.colorTheme.surface.text.gray.normal),
               )
             else if (widget.headerData.leading != null)
               widget.headerData.leading!,
@@ -191,7 +195,7 @@ class _BpAccordionHeaderState extends State<BpAccordionHeader>
                       else
                         Text(widget.headerData.title ?? '',
                             style: titleTextStyle?.setColor(widget
-                                .headerData.isDisabled
+                                    .headerData.isDisabled
                                 ? context.colorTheme.surface.text.gray.disabled
                                 : context.colorTheme.surface.text.gray.normal)),
                       if (widget.headerData.titleSuffix != null)
@@ -217,12 +221,8 @@ class _BpAccordionHeaderState extends State<BpAccordionHeader>
                   return Transform.rotate(
                     angle: _animation.value * 2 * 3.141592653589793,
                     child: Icon(
-                      // !widget.headerData.isDisabled &&
-                      //         widget.headerData.isExpanded
-                      //     ? Icons.expand_less
-                      //     :
                       Icons.expand_more,
-                      size: IconButtonSize.large,
+                      size: GlobalIconSize.large,
                       color: iconColor,
                     ),
                   );
@@ -233,4 +233,3 @@ class _BpAccordionHeaderState extends State<BpAccordionHeader>
     );
   }
 }
-
