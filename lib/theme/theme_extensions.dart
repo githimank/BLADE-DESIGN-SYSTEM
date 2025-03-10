@@ -82,3 +82,21 @@ extension DimensionExtensions on num {
     );
   }
 }
+
+T getValueWithStates<T>(Set<WidgetState> states,
+    {required T defaultStateValue,
+      required T hoverStateValue,
+      required T focusStateValue,
+      required T disabledStateValue}) {
+  if (states.contains(WidgetState.disabled)) {
+    return disabledStateValue;
+  }
+  if (states.contains(WidgetState.focused)) {
+    return focusStateValue;
+  }
+  if (states.contains(WidgetState.hovered)) {
+    return hoverStateValue;
+  }
+
+  return defaultStateValue;
+}

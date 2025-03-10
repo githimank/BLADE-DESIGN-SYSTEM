@@ -89,6 +89,15 @@ class ComponentsScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/accordion');
+                },
+                child: const Text(
+                  'Accordion',
+                ),
+              ),
+              const SizedBox(height: 20),
             ],
           ),
         ),
