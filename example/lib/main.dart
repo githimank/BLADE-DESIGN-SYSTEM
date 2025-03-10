@@ -1,14 +1,15 @@
 import 'package:blade_design_system/theme/blade_theme.dart';
 import 'package:blade_design_system/theme/colors/light_color_theme_impl.dart';
-import 'package:example/components/checkbox_demo.dart';
-import 'package:example/components/link_demo.dart';
 import 'package:flutter/material.dart';
 
 import 'components/RadioDemo.dart';
+import 'components/accordion_details.dart';
 import 'components/amount_demo.dart';
 import 'components/badge_details.dart';
 import 'components/button_details.dart';
+import 'components/checkbox_demo.dart';
 import 'components/chip_demo.dart';
+import 'components/link_demo.dart';
 import 'components/spinner_details.dart';
 import 'components/tooltip_demo.dart';
 import 'components_screen.dart';
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
         '/amountDemo': (context) => const AmountDemo(),
         '/buttonDetails': (context) => const ButtonDetails(),
         '/buttonLink': (context) => const LinkDemo(),
+        '/accordion': (context) => const AccordionDetails(),
       },
       themeMode: ThemeMode.system,
       theme: ThemeData(
