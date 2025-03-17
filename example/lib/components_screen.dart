@@ -107,6 +107,23 @@ class ComponentsScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/counterDetails');
+                },
+                child: const Text(
+                  'Counter',
+                ),
+              ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/progressBarDetails');
+                },
+                child: const Text(
+                  'Progressbar Demo',
+                ),
+              ),
             ],
           ),
         ),
