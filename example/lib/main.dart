@@ -11,6 +11,7 @@ import 'components/button_details.dart';
 import 'components/checkbox_demo.dart';
 import 'components/chip_demo.dart';
 import 'components/link_demo.dart';
+import 'components/progressbar_details.dart';
 import 'components/spinner_details.dart';
 import 'components/tooltip_demo.dart';
 import 'components_screen.dart';
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
         '/buttonLink': (context) => const LinkDemo(),
         '/accordion': (context) => const AccordionDetails(),
         '/counterDetails': (context) => const CounterDetails(),
+        '/progressBarDetails': (context) => const ProgressbarDetails(),
       },
       themeMode: ThemeMode.system,
       theme: ThemeData(
