@@ -1,6 +1,7 @@
 import 'package:blade_design_system/theme/blade_theme.dart';
 import 'package:blade_design_system/theme/colors/light_color_theme_impl.dart';
 import 'package:example/components/counter_details.dart';
+import 'package:example/components/indicator_details.dart';
 import 'package:flutter/material.dart';
 
 import 'components/RadioDemo.dart';
@@ -43,6 +44,7 @@ class MyApp extends StatelessWidget {
         '/accordion': (context) => const AccordionDetails(),
         '/counterDetails': (context) => const CounterDetails(),
         '/progressBarDetails': (context) => const ProgressbarDetails(),
+        '/indicatorDetails': (context) => const IndicatorDetails(),
       },
       themeMode: ThemeMode.system,
       theme: ThemeData(

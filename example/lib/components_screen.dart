@@ -124,6 +124,16 @@ class ComponentsScreen extends StatelessWidget {
                   'Progressbar Demo',
                 ),
               ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/indicatorDetails');
+                },
+                child: const Text(
+                  'Indicator',
+                ),
+              ),
+              const SizedBox(height: 20),
             ],
           ),
         ),
