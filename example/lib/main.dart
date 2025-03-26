@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 import 'components/RadioDemo.dart';
 import 'components/accordion_details.dart';
+import 'components/action_list_item.dart';
 import 'components/amount_demo.dart';
 import 'components/badge_details.dart';
 import 'components/button_details.dart';
@@ -45,6 +46,8 @@ class MyApp extends StatelessWidget {
         '/counterDetails': (context) => const CounterDetails(),
         '/progressBarDetails': (context) => const ProgressbarDetails(),
         '/indicatorDetails': (context) => const IndicatorDetails(),
+        '/actionListItem': (context) => const ActionListItemDetails(),
+
       },
       themeMode: ThemeMode.system,
       theme: ThemeData(
