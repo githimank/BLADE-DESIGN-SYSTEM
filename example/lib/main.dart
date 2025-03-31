@@ -9,6 +9,7 @@ import 'components/accordion_details.dart';
 import 'components/action_list_item.dart';
 import 'components/amount_demo.dart';
 import 'components/badge_details.dart';
+import 'components/bottom_sheet_details.dart';
 import 'components/button_details.dart';
 import 'components/checkbox_demo.dart';
 import 'components/chip_demo.dart';
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
         '/progressBarDetails': (context) => const ProgressbarDetails(),
         '/indicatorDetails': (context) => const IndicatorDetails(),
         '/actionListItem': (context) => const ActionListItemDetails(),
-
+        '/bottomSheet': (context) => const BottomSheetDetails(),
       },
       themeMode: ThemeMode.system,
       theme: ThemeData(

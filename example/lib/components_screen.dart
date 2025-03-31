@@ -142,6 +142,16 @@ class ComponentsScreen extends StatelessWidget {
                   'Action List Item',
                 ),
               ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/bottomSheet');
+                },
+                child: const Text(
+                  'BottomSheet',
+                ),
+              ),
+              const SizedBox(height: 20),
             ],
           ),
         ),
