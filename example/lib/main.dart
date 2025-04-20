@@ -1,5 +1,6 @@
 import 'package:blade_design_system/theme/blade_theme.dart';
 import 'package:blade_design_system/theme/colors/light_color_theme_impl.dart';
+import 'package:example/components/card_demo.dart';
 import 'package:example/components/counter_details.dart';
 import 'package:example/components/indicator_details.dart';
 import 'package:flutter/material.dart';
@@ -49,6 +50,7 @@ class MyApp extends StatelessWidget {
         '/indicatorDetails': (context) => const IndicatorDetails(),
         '/actionListItem': (context) => const ActionListItemDetails(),
         '/bottomSheet': (context) => const BottomSheetDetails(),
+        '/cardDemo': (context) => const CardDetails(),
       },
       themeMode: ThemeMode.system,
       theme: ThemeData(
